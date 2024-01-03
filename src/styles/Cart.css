@@ -32,3 +32,14 @@
 .lmj-cart-closed > button {
 	color: black;
 }
+
+.lmj-items-list{
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+}
+
+.lmj-trash-icon{
+	color: red;
+	font-size: 1em;
+}
