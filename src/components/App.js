@@ -5,8 +5,12 @@ import logo from "../assets/logo.png";
 import Footer from "./Footer.js";
 import "../styles/Layout.css";
 import Recommendation from "./Recommendation";
+import { useState } from "react";
+
 
 function App() {
+	const [cart, updateCart] = useState([]);
+
 	return (
 		<div>
 			<Banner>
@@ -17,8 +21,8 @@ function App() {
 				<Recommendation />
 			</Banner>
 			<div className="lmj-layout-inner">
-				<Cart />
-				<ShoppingList />
+				<Cart cart={cart} updateCart={updateCart}/>
+				<ShoppingList cart={cart} updateCart={updateCart}/>
 			</div>
 			<Footer />
 		</div>
