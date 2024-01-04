@@ -1,0 +1,15 @@
+.lmj-trash-icon{
+	color: red;
+}
+
+.lmj-cart-item-details, .lmj-cart-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lmj-cart-actions{
+    gap: 15px;
+    cursor: pointer;
+}
