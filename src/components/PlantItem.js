@@ -127,7 +127,9 @@ function PlantItem(props) {
 				onMouseEnter={() => setIsImgHovered(true)}
 				onMouseLeave={() => setIsImgHovered(false)}
 			/>
-			<Price className="lmj-plant-item-price" isImgHovered={isImgHovered}>{plant.price}€</Price>
+			<Price className="lmj-plant-item-price" isImgHovered={isImgHovered}>
+				{plant.price}€
+			</Price>
 			{plant.name}
 			{plant.isSpecialOffer && (
 				<Soldes className="lmj-sales" isImgHovered={isImgHovered}>
