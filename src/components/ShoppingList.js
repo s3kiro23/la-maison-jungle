@@ -23,12 +23,7 @@ function ShoppingList({ cart, updateCart }) {
 			<Categories categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 			<ul className="lmj-plant-list">
 				{plantList.map((plant) =>
-					!activeCategory || activeCategory === plant.category ? (
-						<div key={plant.id}>
-							<PlantItem plant={plant} />
-							<button onClick={() => addToCart(plant.name, plant.price)}>Ajouter</button>
-						</div>
-					) : null
+					!activeCategory || activeCategory === plant.category ? <PlantItem plant={plant} addToCart={addToCart} key={plant.id} /> : null
 				)}
 			</ul>
 		</div>

@@ -1,5 +1,5 @@
 import "../styles/Cart.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CartItem from "./CartItem";
 
 function Cart({ cart, updateCart }) {
@@ -15,8 +15,14 @@ function Cart({ cart, updateCart }) {
 			updateCart([...cartFilteredCurrentPlant, { name, price, quantity: currentPlantSaved.quantity - 1 }]);
 		} else if (type === "minus" && currentPlantSaved.quantity === 1) {
 			updateCart(cartFilteredCurrentPlant);
+		} else {
+			updateCart(cartFilteredCurrentPlant);
 		}
 	}
+	useEffect(() => {
+		document.title= `LMJ: ${total}€ d'achats
+		 💸`;
+	}, [total]);
 
 	return isOpen ? (
 		total !== 0 ? (

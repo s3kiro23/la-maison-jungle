@@ -1,6 +1,6 @@
 import "../styles/CartItem.css";
 
-function CartItem({ item, cart, updateCart, updateItemQuantity }) {
+function CartItem({ item, updateItemQuantity }) {
 	return (
 		<div className="lmj-cart-item-details">
 			<span className="lmj-item-details">
@@ -13,7 +13,7 @@ function CartItem({ item, cart, updateCart, updateItemQuantity }) {
 					onClick={(e) => updateItemQuantity(item.name, item.price, e.target.dataset.item)}
 				></i>
 				<i className="fa-solid fa-plus fa-sm" data-item="plus" onClick={(e) => updateItemQuantity(item.name, item.price, e.target.dataset.item)}></i>
-				<i className="fa-regular fa-trash-can lmj-trash-icon" onClick={() => updateCart(cart.filter((cartItem) => cartItem.name !== item.name))}></i>
+				<i className="fa-regular fa-trash-can lmj-trash-icon" data-item="trash" onClick={(e) => updateItemQuantity(item.name, item.price, e.target.dataset.item)}></i>
 			</div>
 		</div>
 	);
