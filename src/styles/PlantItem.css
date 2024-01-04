@@ -1,11 +1,3 @@
-.lmj-plant-item-cover {
-	height: 250px;
-	width: 250px;
-	border-radius: 20px;
-	object-fit: cover;
-	cursor: pointer;
-}
-
 .lmj-plant-item, .lmj-carescale {
 	display: flex;
 	align-items: flex-start;
@@ -27,7 +19,7 @@
 	color: white;
 	padding: 15px;
 	right: 0;
-	bottom: 30.8%;
+	bottom: 33.9%;
 	font-weight: 500;
 }
 
