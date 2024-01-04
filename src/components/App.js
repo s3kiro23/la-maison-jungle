@@ -7,6 +7,7 @@ import "../styles/Layout.css";
 import Recommendation from "./Recommendation";
 import { useState, useEffect } from "react";
 
+
 function App() {
 	const savedCart = localStorage.getItem("cart");
 	const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : []);
@@ -15,7 +16,7 @@ function App() {
 	}, [cart]);
 
 	return (
-		<div>
+		<>
 			<Banner>
 				<div className="lmj-main-content">
 					<img src={logo} alt="La maison jungle" className="lmj-logo" />
@@ -28,7 +29,7 @@ function App() {
 				<ShoppingList cart={cart} updateCart={updateCart} />
 			</div>
 			<Footer />
-		</div>
+		</>
 	);
 }
 

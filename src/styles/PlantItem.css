@@ -3,6 +3,7 @@
 	width: 250px;
 	border-radius: 20px;
 	object-fit: cover;
+	cursor: pointer;
 }
 
 .lmj-plant-item, .lmj-carescale {
@@ -44,4 +45,17 @@
 
 .lmj-carescale {
 	gap: 6px;
+	cursor: pointer;
+}
+
+.lmj-modal-content {
+	text-align: start;
+}
+
+.lmj-modal-content > p{
+	margin-top: 0;
+}
+
+.lmj-modal-content > h4{
+	margin-bottom: 7px;;
 }
