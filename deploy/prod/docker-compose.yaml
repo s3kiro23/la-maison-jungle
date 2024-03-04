@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+    jimsblog-web:
+        image: 057133510824.dkr.ecr.eu-west-3.amazonaws.com/thejunglehouse:latest
+        restart: always
+        volumes:
+            - type: bind
+              source: /var/dev_data/thejunglehouse/log/
+              target: /var/log/thejunglehouse/
+        ports:
+            - "4322:4322"
+        environment:
+            - NODE_ENV=production
